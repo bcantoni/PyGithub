@@ -1395,7 +1395,7 @@ class Repository(github.GithubObject.CompletableGithubObject):
         self, event_type, client_payload=github.GithubObject.NotSet
     ):
         """
-        :calls: POST /repos/:owner/:repo/dispatches <https://developer.github.com/v3/repos/#create-a-repository-dispatch-event>
+        :calls: `POST /repos/:owner/:repo/dispatches <https://developer.github.com/v3/repos/#create-a-repository-dispatch-event>`_
         :param event_type: string
         :param client_payload: dict
         :rtype: bool
@@ -1814,7 +1814,7 @@ class Repository(github.GithubObject.CompletableGithubObject):
     def get_deployment(self, id_):
         """
         :calls: `GET /repos/:owner/:repo/deployments/:deployment_id <https://developer.github.com/v3/repos/deployments/>`_
-        :param: id_: int
+        :param id_: int
         :rtype: :class:`github.Deployment.Deployment`
         """
         assert isinstance(id_, int), id_
@@ -2301,7 +2301,7 @@ class Repository(github.GithubObject.CompletableGithubObject):
 
     def get_git_matching_refs(self, ref):
         """
-        :calls: `GET /repos/:owner/:repo/git/matching-refs/:ref <https://developer.github.com/v3/git/refs/#list-matching-references>`
+        :calls: `GET /repos/:owner/:repo/git/matching-refs/:ref <https://developer.github.com/v3/git/refs/#list-matching-references>`_
         :rtype: :class:`github.PaginatedList.PaginatedList` of :class:`github.GitRef.GitRef`
         """
         assert isinstance(ref, str), ref
@@ -2841,7 +2841,7 @@ class Repository(github.GithubObject.CompletableGithubObject):
 
     def get_stats_commit_activity(self):
         """
-        :calls: `GET /repos/:owner/:repo/stats/commit_activity <developer.github.com/v3/repos/statistics/#get-the-number-of-commits-per-hour-in-each-day>`_
+        :calls: `GET /repos/:owner/:repo/stats/commit_activity <http://developer.github.com/v3/repos/statistics/#get-the-number-of-commits-per-hour-in-each-day>`_
         :rtype: None or list of :class:`github.StatsCommitActivity.StatsCommitActivity`
         """
         headers, data = self._requester.requestJsonAndCheck(
@@ -3105,7 +3105,7 @@ class Repository(github.GithubObject.CompletableGithubObject):
 
     def legacy_search_issues(self, state, keyword):
         """
-        :calls: `GET /legacy/issues/search/:owner/:repository/:state/:keyword <http://developer.github.com/v3/search/legacy>`_
+        :calls: `GET /legacy/issues/search/:owner/:repository/:state/:keyword <http://developer.github.com/v3/search/>`_
         :param state: "open" or "closed"
         :param keyword: string
         :rtype: List of :class:`github.Issue.Issue`
@@ -3309,7 +3309,7 @@ class Repository(github.GithubObject.CompletableGithubObject):
 
     def subscribe_to_hub(self, event, callback, secret=github.GithubObject.NotSet):
         """
-        :calls: `POST /hub <http://developer.github.com/>`_
+        :calls: `POST /hub <https://developer.github.com/v3/repos/hooks/#pubsubhubbub>`_
         :param event: string
         :param callback: string
         :param secret: string
@@ -3319,7 +3319,7 @@ class Repository(github.GithubObject.CompletableGithubObject):
 
     def unsubscribe_from_hub(self, event, callback):
         """
-        :calls: `POST /hub <http://developer.github.com/>`_
+        :calls: `POST /hub <https://developer.github.com/v3/repos/hooks/#pubsubhubbub>`_
         :param event: string
         :param callback: string
         :param secret: string

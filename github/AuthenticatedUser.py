@@ -1030,7 +1030,7 @@ class AuthenticatedUser(github.GithubObject.CompletableGithubObject):
         direction=github.GithubObject.NotSet,
     ):
         """
-        :calls: `GET /user/repos <http://developer.github.com/v3/repos>`
+        :calls: `GET /user/repos <http://developer.github.com/v3/repos>`_
         :param visibility: string
         :param affiliation: string
         :param type: string
@@ -1241,7 +1241,7 @@ class AuthenticatedUser(github.GithubObject.CompletableGithubObject):
 
     def accept_invitation(self, invitation):
         """
-        :calls: `PATCH /user/repository_invitations/:invitation_id <https://developer.github.com/v3/repos/invitations/>`
+        :calls: `PATCH /user/repository_invitations/:invitation_id <https://developer.github.com/v3/repos/invitations/>`_
         :param invitation: :class:`github.Invitation.Invitation` or int
         :rtype: None
         """

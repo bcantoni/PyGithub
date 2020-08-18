@@ -108,7 +108,7 @@ class Workflow(github.GithubObject.CompletableGithubObject):
 
     def create_dispatch(self, ref, inputs=github.GithubObject.NotSet):
         """
-        :calls: `POST /repos/:owner/:repo/actions/workflows/:workflow_id/dispatches`_
+        :calls: `POST /repos/:owner/:repo/actions/workflows/:workflow_id/dispatches <https://docs.github.com/en/rest/reference/actions#create-a-workflow-dispatch-event>`_
         :param ref: :class:`github.Branch.Branch` or :class:`github.Tag.Tag` or :class:`github.Commit.Commit` or string
         :param inputs: dict
         :rtype: bool

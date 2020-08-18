@@ -401,7 +401,7 @@ class Team(github.GithubObject.CompletableGithubObject):
 
     def remove_membership(self, member):
         """
-        :calls: `DELETE /teams/:team_id/memberships/:username <https://developer.github.com/v3/teams/members/#remove-team-membership>`
+        :calls: `DELETE /teams/:team_id/memberships/:username <https://developer.github.com/v3/teams/members/#remove-team-membership>`_
         :param member:
         :return:
         """

@@ -500,7 +500,7 @@ class Branch(github.GithubObject.NonCompletableGithubObject):
 
     def get_required_signatures(self):
         """
-        :calls: `GET /repos/:owner/:repo/branches/:branch/protection/required_signatures <https://developer.github.com/v3/repos/branches>`
+        :calls: `GET /repos/:owner/:repo/branches/:branch/protection/required_signatures <https://developer.github.com/v3/repos/branches>`_
         """
         headers, data = self._requester.requestJsonAndCheck(
             "GET",
@@ -511,7 +511,7 @@ class Branch(github.GithubObject.NonCompletableGithubObject):
 
     def add_required_signatures(self):
         """
-        :calls: `POST /repos/:owner/:repo/branches/:branch/protection/required_signatures <https://developer.github.com/v3/repos/branches>`
+        :calls: `POST /repos/:owner/:repo/branches/:branch/protection/required_signatures <https://developer.github.com/v3/repos/branches>`_
         """
         headers, data = self._requester.requestJsonAndCheck(
             "POST",
@@ -521,7 +521,7 @@ class Branch(github.GithubObject.NonCompletableGithubObject):
 
     def remove_required_signatures(self):
         """
-        :calls: `DELETE /repos/:owner/:repo/branches/:branch/protection/required_signatures <https://developer.github.com/v3/repos/branches>`
+        :calls: `DELETE /repos/:owner/:repo/branches/:branch/protection/required_signatures <https://developer.github.com/v3/repos/branches>`_
         """
         headers, data = self._requester.requestJsonAndCheck(
             "DELETE",
